@@ -18,3 +18,9 @@ else
     SHARE_USE="/share not found"
     SHARE_TOTAL=""
 fi
+
+SYSTEM=$(grep -w "NAME" /etc/os-release | cut -d= -f2 | tr -d '"')
+IP=$(ip a show wlan0 2>/dev/null | awk '/inet / {print $2}' | cut -d/ -f1)
+if [ -z "$IP" ]; then
+    IP=$(ip a show eth0 2>/dev/null | awk '/inet / {print $2}' | cut -d/ -f1)
+fi
