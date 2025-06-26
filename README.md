@@ -78,26 +78,26 @@ sudo dnf install sysstat
 
 ```
 ╔══════════════════════════════════════════════════════════════════════╗
-║                      SYSTEM HEALTH SUMMARY                          ║
+║                      SYSTEM HEALTH SUMMARY                           ║
 ╠══════════════════════════════════════════════════════════════════════╣
-║ HOSTNAME              : myserver                                    ║
-║ OPERATING SYSTEM      : Ubuntu 22.04.3 LTS                         ║
-║ IP ADDRESS            : 192.168.1.100                               ║
-║ DISK USAGE (/)        : 25G       / 50G                            ║
-║ SHARE USAGE (/wikijs) : 5.2G      / 100G                           ║
+║ HOSTNAME              : myserver                                     ║
+║ OPERATING SYSTEM      : Ubuntu 22.04.3 LTS                           ║
+║ IP ADDRESS            : 192.168.1.100                                ║
+║ DISK USAGE (/)        : 25G       / 50G                              ║
+║ SHARE USAGE (/wikijs) : 5.2G      / 100G                             ║
 ╠══════════════════════════════════════════════════════════════════════╣
-║ CPU CORES             : 4                                           ║
-║ CPU USAGE             : 15.25%                                      ║
-║ LOAD AVERAGE          :       (1m) |       (5m) |       (15m)      ║
-║ MEMORY USAGE          : 2048 MB    / 8192 MB                       ║
-║ SWAP USAGE            : 0 MB / 2048 MB                             ║
+║ CPU CORES             : 4                                            ║
+║ CPU USAGE             : 15.25%                                       ║
+║ LOAD AVERAGE          :       (1m) |       (5m) |       (15m)        ║
+║ MEMORY USAGE          : 2048 MB    / 8192 MB                         ║
+║ SWAP USAGE            : 0 MB / 2048 MB                               ║
 ╠══════════════════════════════════════════════════════════════════════╣
-║ SSH SERVICE           : active                                      ║
-║ SAMBA SERVICE         : active                                      ║
-║ NTP SERVICE           : active                                      ║
-║ NTP SYNCHRONIZED      : yes                                         ║
-║ SNMP SERVICE          : inactive                                    ║
-║ FTP SERVICE           : active                                      ║
+║ SSH SERVICE           : active                                       ║
+║ SAMBA SERVICE         : active                                       ║
+║ NTP SERVICE           : active                                       ║
+║ NTP SYNCHRONIZED      : yes                                          ║
+║ SNMP SERVICE          : inactive                                     ║
+║ FTP SERVICE           : active                                       ║
 ╚══════════════════════════════════════════════════════════════════════╝
 ```
 
