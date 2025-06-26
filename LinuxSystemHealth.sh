@@ -34,3 +34,13 @@ FTP_STATUS=$(systemctl is-active vsftpd)
 SAMBA_STATUS=$(systemctl is-active smbd)
 NTP_STATUS=$(systemctl is-active systemd-timesyncd)
 NTP_SYNC=$(timedatectl | grep 'NTP synchronized:' | awk '{print $3}')
+
+printf "\n"
+printf "╔══════════════════════════════════════════════════════════════════════╗\n"
+printf "║                      SYSTEM HEALTH SUMMARY                          ║\n"
+printf "╠══════════════════════════════════════════════════════════════════════╣\n"
+printf "║ HOSTNAME              : %-45s ║\n" "$HOSTNAME"
+printf "║ OPERATING SYSTEM      : %-45s ║\n" "$SYSTEM"
+printf "║ IP ADDRESS            : %-45s ║\n" "$IP"
+printf "║ DISK USAGE (/)        : %-10s / %-31s ║\n" "$USED_DISK" "$AVAILABLE_DISK"
+printf "║ SHARE USAGE (/wikijs) : %-10s / %-31s ║\n" "$SHARE_USE" "$SHARE_TOTAL"
