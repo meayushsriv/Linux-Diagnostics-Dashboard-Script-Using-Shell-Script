@@ -24,3 +24,13 @@ IP=$(ip a show wlan0 2>/dev/null | awk '/inet / {print $2}' | cut -d/ -f1)
 if [ -z "$IP" ]; then
     IP=$(ip a show eth0 2>/dev/null | awk '/inet / {print $2}' | cut -d/ -f1)
 fi
+
+CPU_PERCENT=$(mpstat 1 1 | awk '/Average:/ && $NF ~ /[0-9.]+/ {printf "%.2f%%", 100 - $NF}')
+CPU_CORE=$(nproc)
+
+SSH_STATUS=$(systemctl is-active ssh)
+SNMP_STATUS=$(systemctl is-active snmpd)
+FTP_STATUS=$(systemctl is-active vsftpd)
+SAMBA_STATUS=$(systemctl is-active smbd)
+NTP_STATUS=$(systemctl is-active systemd-timesyncd)
+NTP_SYNC=$(timedatectl | grep 'NTP synchronized:' | awk '{print $3}')
